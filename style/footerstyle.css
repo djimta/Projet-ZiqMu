@@ -1,0 +1,38 @@
+body{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: teal;
+    margin: 0 auto;
+    padding: 0 ;
+    overflow-x: hidden;
+}
+
+footer{
+    margin-top: 10em;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(39, 38, 38);
+
+}
+.container2{
+    padding-top: 1rem;
+    text-align: center;
+    background-color: #0000;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    
+
+}
+.container2 li{
+    list-style: none;
+    display: column;
+    padding: 1rem;
+}
+.container2 li a {
+    color: rgb(255, 255, 255);
+    padding: 5px ;
+    text-align: left;
+    text-decoration: none; 
+
+}
