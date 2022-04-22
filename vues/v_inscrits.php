@@ -1,6 +1,6 @@
 <html>
   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="../style/inscrit.css">
+<link rel="stylesheet" href="style/inscrit.css">
 
 <body>
 <div class="container4">

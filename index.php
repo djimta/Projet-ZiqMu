@@ -8,34 +8,34 @@ else {
 }
 
 // vue qui crée l’en-tête de la page
-include("../vues/v_entete.php") ;
+include("vues/v_entete.php") ;
 
-require_once ("../modele/class_PDOziqmu.php");
+require_once ("modele/class_PDOziqmu.php");
 $monPdoMusic = PdoMusic::getPdoMusic();
 
 switch($action)
 {
  case 'accueil':
  // vue qui crée le contenu de la page d’accueil
- include("../vues/v_accueil.php");
+ include("vues/v_accueil.php");
  break;
 }
  switch($action)
  {
   case 'catalogue':
-  require_once ("../modele/class_PDOziqmu.php");
+  require_once ("modele/class_PDOziqmu.php");
   $result = $monPdoMusic -> getSeances();
 
 
-  include("../vues/v_catalogue.php");
+  include("vues/v_catalogue.php");
   break;
  } 
 switch($action)
   {
     case 'inscription':
-    require_once ("../modele/class_PDOziqmu.php");
+    require_once ("modele/class_PDOziqmu.php");
     $result = $monPdoMusic -> getSeances(); 
-   include("../vues/v_inscrits.php");
+   include("vues/v_inscrits.php");
    break;
 }
 
@@ -43,7 +43,7 @@ switch($action)
   {
     // vue qui crée le contenu de la page des inscrits
     case 'inscrit':
-      require_once ("../modele/class_PDOziqmu.php");
+      require_once ("modele/class_PDOziqmu.php");
       $inscr = $monPdoMusic -> GetInscrits();
   if(isset($_POST["envoie"])){
     try{
@@ -57,7 +57,7 @@ switch($action)
       $niveau = $_POST['user_lvl'];
     
   
-      require_once ("../modele/class_PDOziqmu.php");
+      require_once ("modele/class_PDOziqmu.php");
       $persoId = $monPdoMusic -> InsertPerson($nom, $prenom,$adresse, $email, $telephone, $niveau);
       $monPdoMusic -> insertStudent($persoId, $niveau);
       //echo 'niveau :', $idcours;
@@ -71,7 +71,7 @@ switch($action)
   }
   
 
-   include("../vues/Inscription.php");
+   include("vues/Inscription.php");
    break;
 }
 
@@ -86,14 +86,14 @@ switch($action)
       $num = $_REQUEST['numero'];
       $inscriptions = $monPdoMusic -> GetInscrits();
       $inscription = $inscriptions[$num];
-   include("../vues/pdf_inscription.php");
+   include("vues/pdf_inscription.php");
    creePDF($inscription);
    break;
 }
 
 
 // vue qui crée le pied de pages
-include("../vues/v_pied.php") ;
+include("vues/v_pied.php") ;
 ?>
 
 </body>
