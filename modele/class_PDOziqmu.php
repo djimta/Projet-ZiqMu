@@ -2,9 +2,9 @@
 
 class PdoMusic{
   private static $serveur = 'mysql:host=localhost:3306';
-  private static  $bdd = "dbname=bd_zicmu";
-  private static  $user = 'root';
-  private static  $password = '';	
+  private static  $bdd = 'dbname=db_zicmu';
+  private static  $user = 'IntraAdmin';
+  private static  $password = '6syf4R_4';	
         
         private static $monPdo;
 	    private static $monPdoMusic=null;
